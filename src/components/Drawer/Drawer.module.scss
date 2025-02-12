@@ -1,0 +1,152 @@
+@use "../../vars.scss" as *;
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+.overlayVisible {
+	visibility: visible;
+	opacity: 1;
+
+	.drawer {
+		transform: translateX(0);
+	}
+}
+
+.drawer {
+	position: absolute;
+	width: 420px;
+	height: 100%;
+	right: 0;
+	background: #ffffff;
+	box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	transform: translateX(100%);
+	transition: transform .3s ease-in-out;
+
+	.items {
+		flex-grow: 1;
+		overflow: auto;
+		margin-bottom: 40px;
+	}
+
+	h2 {
+		font-size: 24px;
+		margin: 0;
+		padding-bottom: 30px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.btnRemove {
+		opacity: 0.5;
+		transition: opacity 0.15s ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.sneaker {
+		height: 120px;
+		padding: 20px;
+		display: flex;
+		align-items: center;
+		border: 1px solid $borderGray;
+		border-radius: 20px;
+		overflow: hidden;
+		margin-bottom: 20px;
+
+		.price {
+			padding: 0 12px 0 20px;
+		}
+
+		p,
+		b {
+			font-size: 16px;
+			margin: 0 0 5px 0;
+		}
+
+		b {
+			font-weight: 700;
+		}
+	}
+
+	.finalPrice {
+		font-size: 16px;
+
+		.totalBlock {
+			padding: 5px 0;
+			margin: 0;
+		}
+
+		li {
+			display: flex;
+			align-items: flex-end;
+			margin: 0 0 20px 0;
+
+			list-style: none;
+
+			> div {
+				flex-grow: 1;
+				height: 100%;
+				border-bottom: 1px dashed #dfdfdf;
+				margin: 0 8px;
+				height: 1px;
+				position: relative;
+				top: -4px;
+			}
+		}
+	}
+}
+
+.greenBtn {
+	width: 325px;
+	align-self: center;
+	position: relative;
+
+	img {
+		position: absolute;
+		right: 30px;
+		top: 40%;
+		transition: transform 0.15s ease-in-out;
+	}
+
+	&:hover {
+		img {
+			transform: translateX(5px);
+		}
+	}
+
+	&:disabled {
+		animation: button-loading 1s ease-in-out infinite;
+		img {
+			display: none;
+		}
+	}
+}
+
+@keyframes button-loading {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: .7;
+	}
+	100% {
+		opacity: 1;
+	}
+}

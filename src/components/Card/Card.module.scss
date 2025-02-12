@@ -1,0 +1,55 @@
+@use '../../vars.scss' as *;
+
+.card {
+	box-sizing: border-box;
+	width: 220px;
+	max-height: 282px;
+	padding: 20px 30px 30px;
+	border: 1px solid $borderGray;
+	border-radius: 40px;
+	transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+	position: relative;
+
+	h5 {
+		font-weight: 400;
+		font-size: 14px;
+		margin: 15px 0;		
+	}
+
+	span {
+		font-size: 13px;
+		opacity: 0.5;
+		text-transform: uppercase;
+	}
+
+	b {
+		font-size: 14px;
+	}
+
+	.buySneaker {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.price {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.btnPlus {
+		cursor: pointer;
+	}
+
+	.favorite {
+		position: absolute;
+		cursor: pointer;
+		left: 30px;
+		top: 20px;
+	}
+
+    &:hover {
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.07);
+        transform: translateY(-5px);
+    }
+}

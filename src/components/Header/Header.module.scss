@@ -1,0 +1,47 @@
+@use '../../vars.scss' as *;
+
+header {
+	padding: 45px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #eaeaea;
+
+	a, a:visited {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	img {
+		margin-right: 15px;
+	}
+
+	.headerLeft {
+		display: flex;
+		align-items: center;
+
+		h3 {
+			text-transform: uppercase;
+		}
+
+		p {
+			opacity: 0.5;
+		}
+
+		h3,
+		p {
+			margin: 0;
+		}
+	}
+
+	.headerRight {
+		list-style: none;
+		display: flex;
+		padding: 0;
+		gap: 30px;
+
+		li {
+			cursor: pointer;
+		}
+	}
+}

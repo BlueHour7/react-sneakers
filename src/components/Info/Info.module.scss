@@ -1,0 +1,45 @@
+.drawerEmpty {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 50px;
+	margin: auto 0;
+	text-align: center;
+
+	h3,
+	p {
+		margin: 0;
+	}
+
+	h3 {
+		font-size: 22px;
+		margin-bottom: 10px;
+		font-weight: 600;
+	}
+
+	p {
+		margin-bottom: 40px;
+		font-size: 16px;
+		line-height: 24px;
+		opacity: 0.5;
+	}
+
+	img {
+		margin-bottom: 20px;
+	}
+
+	.greenBtn {
+		width: 245px;
+
+		img {
+			left: 30px;
+		}
+
+		&:hover {
+			img {
+				transform: translateX(-5px);
+			}
+		}
+	}
+}
