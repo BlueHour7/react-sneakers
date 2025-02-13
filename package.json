@@ -1,9 +1,9 @@
 {
   "name": "react-sneakers",
+  "homepage": "https://bluehour7.github.io/React-sneakers/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://bluehour7.github.io/React-sneakers/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
