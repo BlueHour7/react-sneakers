@@ -1,11 +1,12 @@
 @use '../../vars.scss' as *;
 
 header {
-	padding: 45px;
+	padding: clamp(10px, 2.5vw, 45px);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 2px solid #eaeaea;
+	row-gap: 10px;
 
 	a, a:visited {
 		text-decoration: none;
@@ -43,5 +44,12 @@ header {
 		li {
 			cursor: pointer;
 		}
+	}
+}
+
+@media (max-width: 600px) {
+	header {
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }

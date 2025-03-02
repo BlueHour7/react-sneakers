@@ -17,7 +17,7 @@ function Info({ title, description, img }) {
 					onClick={() => setIsDrawerOpened((prev) => !prev)}
 					className={`${styles.greenBtn} ${stylesGreenBtn.greenBtn} greenBtn`}
 				>
-					<img src="/img/icons/arrow-left.svg" alt="" />К покупкам
+					<img src="img/icons/arrow-left.svg" alt="" />К покупкам
 				</button>
 			</Link>
 		</div>

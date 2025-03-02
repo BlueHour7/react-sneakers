@@ -131,7 +131,10 @@ function App() {
 			<div className="wrapper">
 				<Drawer
 					items={cartItems}
-					onClose={() => setIsDrawerOpened((prev) => !prev)}
+					onClose={() => {
+						setIsDrawerOpened((prev) => !prev);
+						document.body.classList.toggle("no-scroll");
+					}}
 					isDrawerOpened={isDrawerOpened}
 					onRemove={onRemoveItemDrawer}
 					totalPrice={cartItems.reduce(
@@ -140,7 +143,10 @@ function App() {
 					)}
 				/>
 				<Header
-					onOpenDrawer={() => setIsDrawerOpened((prev) => !prev)}
+					onOpenDrawer={() => {
+						setIsDrawerOpened((prev) => !prev);
+						document.body.classList.toggle("no-scroll");
+					}}
 				/>
 				<Routes>
 					<Route

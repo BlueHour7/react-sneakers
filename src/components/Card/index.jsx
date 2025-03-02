@@ -30,8 +30,8 @@ function Card({
 					height={32}
 					src={
 						isFavorite
-							? "/img/icons/favorite-like.svg"
-							: "/img/icons/favorite-unlike.svg"
+							? "img/icons/favorite-like.svg"
+							: "img/icons/favorite-unlike.svg"
 					}
 					alt="liked"
 					onClick={toggleFavorite}
@@ -47,7 +47,7 @@ function Card({
 				{onAddToDrawer && <img
 					className={styles.btnPlus}
 					src={
-						added ? "/img/icons/added.svg" : "/img/icons/plus.svg"
+						added ? "img/icons/added.svg" : "img/icons/plus.svg"
 					}
 					alt=""
 					width={32}

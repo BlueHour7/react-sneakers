@@ -48,7 +48,7 @@ function Home({
 						: "Все кроссовки"}
 				</h1>
 				<div className="search">
-					<img src="/img/icons/loupe.svg" alt="" />
+					<img src="img/icons/loupe.svg" alt="" />
 					<input
 						onChange={onChangeSearchInput}
 						value={searchValue}
@@ -59,7 +59,7 @@ function Home({
 							className="clearSearch"
 							width={20}
 							height={20}
-							src="/img/icons/remove.svg"
+							src="img/icons/remove.svg"
 							alt=""
 							onClick={() => setSearchValue("")}
 						/>

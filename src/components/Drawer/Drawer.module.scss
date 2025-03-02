@@ -150,3 +150,10 @@
 		opacity: 1;
 	}
 }
+
+@media (max-width: 600px) {
+	.drawer {
+		width: 85%;
+		padding: 3vw;
+	}
+}

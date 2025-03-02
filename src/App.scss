@@ -7,6 +7,10 @@ body {
 	background-color: #e7f6ff;
 }
 
+.no-scroll {
+	overflow: hidden;
+}
+
 * {
 	font-family: "Inter", system-ui;
 	box-sizing: border-box;
@@ -17,7 +21,7 @@ body {
 	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
 	border-radius: 20px;
 	max-width: 1080px;
-	margin: 50px auto;
+	margin: clamp(0px, 2.5vw, 40px) auto;
 }
 
 .greenBtn {
@@ -46,7 +50,7 @@ body {
 }
 
 .content {
-	padding: 40px;
+	padding: clamp(15px, 2.5vw, 40px);
 }
 
 .titleSearch {
@@ -54,6 +58,10 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 20px;
+
+	h1 {
+		font-size: clamp(1.6em, 2.2vw, 2em);
+	}
 
 	.search {
 		display: flex;
@@ -65,13 +73,13 @@ body {
 
 		.clearSearch {
 			cursor: pointer;
+			margin-left: auto;
 		}
 
 		input {
 			border: 0;
 			padding: 13px;
 			font-size: 16px;
-			width: 200px;
 
 			&:focus {
 				outline: none;
@@ -82,8 +90,28 @@ body {
 
 .cards {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-around;
 	align-content: space-between;
 	flex-wrap: wrap;
-	gap: 40px;
+	gap: clamp(0px, 2.5vw, 40px);
+}
+
+@media (max-width: 600px) {
+	.titleSearch {
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.search {
+			width: 97%;
+		}
+	}
+
+	.titleSearch h1 {
+		display: none;
+	}
+
+	.wrapper {
+		margin-top: 0;
+		border-radius: 0;
+	}
 }
