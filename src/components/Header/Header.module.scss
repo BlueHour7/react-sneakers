@@ -52,4 +52,18 @@ header {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+
+	.headerRight li{
+		display: block;
+
+		span {
+			display: block;
+		}
+
+		img {
+			display: block;
+			margin-inline: auto;
+			margin-bottom: 8px;
+		}
+	}
 }

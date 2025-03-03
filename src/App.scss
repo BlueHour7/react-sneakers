@@ -115,3 +115,11 @@ body {
 		border-radius: 0;
 	}
 }
+
+@media (max-width: 330px) {
+	.titleSearch {
+		.search {
+			width: auto;
+		}
+	}
+}

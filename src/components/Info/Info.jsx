@@ -12,9 +12,12 @@ function Info({ title, description, img }) {
 			<img width={120} src={img} alt="" />
 			<h3>{title}</h3>
 			<p>{description}</p>
-			<Link to='/'>
+			<Link to="/">
 				<button
-					onClick={() => setIsDrawerOpened((prev) => !prev)}
+					onClick={() => {
+						setIsDrawerOpened((prev) => !prev);
+						document.body.classList.toggle("no-scroll");
+					}}
 					className={`${styles.greenBtn} ${stylesGreenBtn.greenBtn} greenBtn`}
 				>
 					<img src="img/icons/arrow-left.svg" alt="" />К покупкам
